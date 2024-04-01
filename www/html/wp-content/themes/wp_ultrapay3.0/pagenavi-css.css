@@ -1,0 +1,31 @@
+/*
+Default style for WP-PageNavi plugin
+
+http://wordpress.org/extend/plugins/wp-pagenavi/
+*/
+
+.wp-pagenavi {
+	clear: both;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+  line-height: 1.66;
+  font-size: 1.8rem;
+  width: 30px;
+  text-align: center; 
+  display: inline-block;
+}
+.wp-pagenavi .nextpostslink, .wp-pagenavi .previouspostslink {
+  width: 60px ;
+}
+
+.wp-pagenavi a:hover, .wp-pagenavi span.current {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.wp-pagenavi span.current {
+  background-color: #b0bec5;
+  color: #fff;
+  border-radius: 2.5px;    
+}

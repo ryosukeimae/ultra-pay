@@ -1,0 +1,462 @@
+@charset "UTF-8";
+
+
+/*------あれこれ(一覧)------*/
+.arekore_top_visual{
+  text-align: center;
+  color: #fff;
+  margin-top: 65px;
+  height: 53.3vw;
+/*  background-color: #8A8787;*/
+  background-image: url("../img/arekore_img/top_visual_sp.jpg");  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.arekore_top_visual h1{
+  padding-top: 68px;
+  font-size: 2.4rem;
+  font-weight: 700;  
+}
+.arekore_top_visual p{
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding-top: 16px;  
+}
+.arekore_wrap{
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-right: 3%;
+  padding-left: 3%;
+  background-color: #F3F4F4;
+}
+.arekore_article{
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+.arekore_article:hover{
+  opacity: 0.5;
+  transform: scale(0.995);
+}
+.arekore_meta{
+  padding: 20px 20px 25px;
+}
+.arekore_meta ul{
+  display: flex;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.arekore_meta ul li{
+  background-color: #FA4C5C;
+  text-align: center;
+  padding: 3px 6px;
+  margin-right: 5px;
+}
+.arekore_meta h2{
+  font-size: 2.0rem;
+  color: #232A29;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.arekore_meta p{
+  font-size: 1.3rem;
+  color: #232A29;
+  line-height: 2.0;
+  margin-bottom: 20px;
+}
+.arekore_meta time{
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+
+/*------あれこれ_個別ページ------*/
+.arekore_each_wrap{
+  margin-top: 65px;
+}
+/*.arekore_each_wrap div{
+  margin: auto;
+}*/
+.arekore_each_header{
+  margin-right: 3%;
+  margin-left: 3%;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.arekore_each_header h1{
+  font-size: 2.5rem;
+  line-height: 1.4;
+  font-weight: 700;
+  padding-bottom: 25px;
+}
+.arekore_each_header time{
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+.arekore_each_header .released{
+  position: relative;
+  padding-left: 20px;
+}
+.arekore_each_header .released::before{
+  position: absolute;
+  font-family: 'Material Icons';
+  content: '\e8df';
+  left: 6px;
+  top: 4px;
+}
+.arekore_each_header .modified{
+  position: relative;
+  padding-left: 30px;  
+}
+.arekore_each_header .modified::before{
+  position: absolute;
+  font-family: 'Material Icons';
+  content: '\e5d5';
+  left: 18px;
+  top: 3px;  
+}
+.arekore_contents_wrap{
+  padding-right: 3%;
+  padding-left: 3%;
+  font-size: 1.6rem;
+  line-height: 1.9;
+}
+.arekore_contents_wrap p{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.arekore_contents_wrap p a{
+  text-decoration: underline;
+  color: #20D0B8;
+}
+.arekore_contents_wrap p a:hover{
+  opacity: 0.5;
+}
+
+/*目次の設定*/
+.arekore_contents_wrap .toc_title{
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.no_bullets{
+  background-color: #F3F4F4;
+  padding: 15px;
+  margin-top: 40px;
+}
+.no_bullets p{
+    position: relative;
+    padding: 0 0 0 16px;
+    color: #848484;
+}
+.no_bullets li:hover{
+  opacity: 0.5;
+}
+.no_bullets p::before{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    border: 7px solid transparent;
+    border-top: 13px solid #838887;   /* 好みで色を変えてください */ 
+}
+.no_bullets li{
+  line-height: 2.5;
+  font-size: 1.5rem;
+  color: #848484;
+}
+.no_bullets li:not(:last-of-type){
+  border-bottom: 1px solid #DADBDB;    
+}
+.no_bullets a{
+  color: #848484;
+}
+.arekore_contents_wrap h2{
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding-top: 36px;
+  margin-bottom: 20px;
+}
+.arekore_contents_wrap h3{
+  font-weight: 700;
+  font-size: 2.0rem;
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+.arekore_each_footer{
+  padding-top: 10px;
+  padding-bottom: 60px;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.arekore_category{
+  display: flex;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+.arekore_category li{
+  background-color: #FA4C5C;
+  text-align: center;
+  padding: 7px 12px;
+  margin-right: 5px;
+}
+.arekore_sns{
+  display: flex;
+  margin-bottom: 60px;
+}
+.arekore_sns img{
+  width: 30px;
+/*  margin-right: 20px;*/
+}
+.arekore_sns li:not(:last-of-type){
+  margin-right: 20px;
+}
+.arekore_sns li:hover{
+  opacity: 0.5;
+}
+/*あれこれアプリダウンロード書式*/
+.arekore_link_premessage{
+  font-size: 13.5px;
+  line-height: 2.0;
+  color: #20D0B8;
+  font-weight: 700;
+}
+.arekore_link{
+  display: flex;
+  justify-content: space-between;
+  max-width: 340px;
+}
+.arekore_link li:first-of-type{
+  padding-right: 10px;
+}
+.arekore_link li{
+ /* max-width: 160px;*/
+}
+.arekore_link li:hover{
+  opacity: 0.5;;
+}
+
+/*初期化したul/olのリスト表示*/
+.arekore_each_wrap ul{
+  list-style: disc;
+  padding-left: 24px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.arekore_each_wrap ol{
+  list-style: decimal;
+  padding-left: 24px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/*目次欄のリスト無効化*/
+.arekore_each_wrap .toc_list{
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.arekore_each_wrap .arekore_link{
+  list-style: none;
+  margin: auto;
+  padding-left: 0;  
+}
+/*記事内テーブル作成の罫線修正（reset.cssの打ち消し）*/
+.arekore_each_wrap .wp-block-table thead{
+  border-bottom: 3px solid;
+}
+.arekore_each_wrap .wp-block-table td, .arekore_each_wrap .wp-block-table th{
+  border: 1px solid;
+}
+.arekore_each_wrap strong{
+  font-weight: bold;
+}
+.arekore_footer_caution{
+  margin-top: 75px;
+  line-height: 2.0;
+}
+.arekore_ranking{
+  margin-top: 80px;
+  padding-bottom: 36px;
+  border-bottom: 2px solid #f2f2f2;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.arekore_ranking h3{
+  font-weight: 700;
+  font-size: 2.0rem;
+  padding-top: 36px;
+  margin-bottom: 30px;
+  border-top: 2px solid #f2f2f2;
+}
+
+/*---キャンペーン個別ページ---*/
+.campaign_each_header{
+  padding-top: 60px;
+}
+.campaign_each_term{
+  font-weight: 900;
+}
+
+/*---あれこれテンプレート１---*/
+.arekore_contents_wrap .aligncenter{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width:768px){
+
+  /*------あれこれ一覧------*/
+  .arekore_top_visual{
+    background-image: url("../img/arekore_img/top_visual_pc.jpg");   
+    height:26vw;
+  }
+  .arekore_top_visual h1{
+    font-size: 4.8rem;
+    padding-top: 9vw;
+  }
+  .arekore_top_visual p{
+    font-size: 2.4rem;
+    padding-top: 30px;
+  }
+  .arekore_wrap{
+    padding-top: 80px;
+    padding-right: 0%;
+    padding-left: 0%;
+  }
+  .article_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1080px;
+    margin: auto;
+  }
+  .arekore_article{
+    max-width: 340px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .arekore_meta ul{
+    font-size: 1.4rem;
+  }
+  .arekore_meta h2{
+    line-height: 1.6;
+  }
+  .arekore_meta p{
+    font-size: 1.6rem;
+  }
+  .arekore_meta time{
+    font-size: 1.4rem;
+  }
+  
+  /*------あれこれ_個別ページ------*/
+  .arekore_each_wrap{
+    max-width: 620px;
+    margin: 80px auto 0px;
+  }
+  .arekore_each_header{
+    padding-right: 0;
+    padding-left: 0;
+    letter-spacing: 0.05em;
+  }
+  .arekore_each_header h1{
+    font-size: 3.0rem;
+  }
+  .arekore_each_header time{
+    font-size: 1.4rem;
+    }
+  .arekore_each_header .released{
+    padding-left: 20px;
+  }
+  .arekore_each_header .released::before{
+    left: 4px;
+    top: 5px;
+  }
+  .arekore_each_header .modified{
+    padding-left: 30px;  
+  }
+  .arekore_each_header .modified::before{
+    left: 16px;
+    top: 5px;  
+  }  
+  .arekore_contents_wrap{
+    padding-right: 0%;
+    padding-left: 0%;
+    font-size: 1.8rem;
+    letter-spacing: 0.065em;    
+  }  
+  .arekore_contents_wrap h2{
+    font-size: 2.8rem;
+  }
+  .arekore_each_footer{
+    max-width: 620px;
+    margin: auto;    
+  }
+  .arekore_link_premessage{
+    text-align: center;
+    font-size: 18px;
+  }
+    /*目次の設定*/
+  .no_bullets{
+    padding: 15px 35px;
+  } 
+  .arekore_each_footer{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 120px;
+  }
+  .arekore_each_footer_flex{
+    display: flex;
+    justify-content: space-between;
+  }
+  .arekore_category{
+    margin-bottom: 80px;
+  }
+  .arekore_link{
+    padding: 0 40px;
+    max-width: none;
+  }
+  .arekore_link li{
+ /*   max-width: 255px;*/
+  }
+  .arekore_ranking{
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  
+}
+
+@media screen and (min-width:768px) and ( max-width:1024px) {
+  
+}
+
+@media screen and ( max-width:599px){
+  .arekore_link_fixwrap{
+    position: fixed;
+    bottom: 3px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    width: 340px;
+    border-radius: 5px;
+  }
+  .arekore_link_fixwrap .arekore_link_premessage{
+    font-size: 12.5px;
+    text-align: center;   
+  }
+  .arekore_link_fixwrap .arekore_link_premessage{
+    justify-content: center;    
+  }
+  
+}
+
+

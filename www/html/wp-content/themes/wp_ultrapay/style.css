@@ -1,0 +1,1080 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*
+Theme Name: ultra pay 1.0
+Author: ULTRA Inc. Fuyu Nagao
+Author URI: https://ultra-pay.co.jp/
+Description: ultra pay カードのホームページ用テーマ
+Version: 1.0
+*/
+
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+html{
+	font-size: 62.5%;
+}
+body{
+	color:#37474f;
+	font-family: "Noto Sans CJK JP", sans-serif;
+	font-size: 1.5rem;
+	-webkit-font-smoothing:antiliased;
+	-moz-osx-font-smoothing:grayscale;
+	font-feature-settings: "palt";
+	letter-spacing: 0.025em;
+}
+img{
+	max-width:100%;
+	height: auto;
+}
+a{
+	color: #37474f;
+	text-decoration: none;
+}
+.text_center{
+	text-align: center;
+}
+.text_green{
+  color: #3dccb7;
+}
+.text_white{
+  color: #fff;
+}
+.pc{
+	display: none;
+}
+.btn_1{
+  display: block;
+  color: #fff;
+  background-color: #3dccb7;
+  border-radius: 22px;
+  width: 188px;
+  text-align: center;
+  margin: 0 auto 60px;
+  height: 44px;
+  line-height: 44px;
+}
+.btn_1:hover{
+  opacity: 0.5;
+  transform: scale(0.95);
+}
+.bg_gray{
+  background-color: rgba(46, 90, 80, 0.05);
+}
+.bg_white{
+  background-color: #fff;
+}
+.inner{
+  margin: 0 auto;
+  padding-right: 6%;
+  padding-left: 6%;
+}
+.pb_40{
+  padding-bottom: 40px;
+}
+.pb_60{
+  padding-bottom: 60px;
+}
+.pb_100{
+  padding-bottom: 100px;
+}
+.fadein {
+  opacity : 0;
+  transform: translateY(40px);
+  transition: all 1.5s;
+}
+.fadein_x{
+  opacity : 0;
+  transform: translateX(-40px);
+  transition: all 1.5s;  
+}
+.home_section_title, .sub_section_title{
+  font-size: 3.0rem;
+  font-weight: 700;
+  line-height: 1.3;
+  padding-bottom: 40px;
+}
+.home_section_title{
+  color: #3dccb7;
+}
+.home_section_mg, .sub_section_mg{
+  line-height: 2.4;
+  padding-bottom: 60px;
+}
+
+/*---------------------------
+*header
+---------------------------*/
+.header{
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  top: 0;
+  background-color: #fff;
+}
+.header_title{
+  display: flex;
+  justify-content: space-between;
+  height: 65px;
+}
+.header_logo{
+  display: inline-block;
+  width: 102px;
+  margin-top: 17px;
+  margin-left: 23px;
+}
+/*Menuボタン*/
+.menu_trigger,
+.menu_trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+.menu_trigger {
+  position: relative;
+  width: 20px;
+  height: 16px;
+  margin-top: 25px;
+  margin-right: 23px;
+}
+.menu_trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #203e38;
+  border-radius: 4px;
+}
+.menu_trigger span:nth-of-type(1) {
+  top: 0;
+}
+.menu_trigger span:nth-of-type(2) {
+  top: 7px;
+}
+.menu_trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+.menu_trigger.active span:nth-of-type(1) {
+  -webkit-transform: translateY(7px) rotate(-45deg);
+  transform: translateY(7px) rotate(-45deg);
+}
+.menu_trigger.active span:nth-of-type(2) {
+  left: 50%;
+  opacity: 0;
+  -webkit-animation: active-menu-bar02 .8s forwards;
+  animation: active-menu-bar02 .8s forwards;
+}
+@-webkit-keyframes active-menu-bar02 {
+  100% {
+    height: 0;
+  }
+}
+@keyframes active-menu-bar02 {
+  100% {
+    height: 0;
+  }
+}
+.menu_trigger.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-7px) rotate(45deg);
+  transform: translateY(-7px) rotate(45deg);
+}
+/*Menuコンテンツ*/
+.header_nav{
+  position: absolute;
+  font-weight: bold;
+  text-align: center;
+  top: 65px;
+  display: none;
+  right: 0%;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0.97;
+  padding-top: 74px;
+}
+.header_nav_list li a{
+  display: block;
+  padding-bottom: 16px;  
+  margin-bottom: 30px;
+}
+.header_nav_list li a:hover{
+  color:  #3dccb7;   
+}
+
+.header_nav_list li a.current{
+  position: relative;
+  display: inline-block;
+}
+.header_nav_list li a.current:before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0px;/*線の上下位置*/
+  width: 36px;/*線の長さ*/
+  height: 3px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #20d0b8;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+.header_nav_app{
+  margin-top: 50px;
+  margin-bottom: 115px;
+}
+.header_nav_app li a img{
+  width: 156px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/*---------------------------
+*Main Visual
+---------------------------*/
+.main_visual{
+  margin-top: 65px;
+  margin-bottom: 50px;
+}
+.main_visual_bg{
+  background: url("img/MV_BG_sp.png") no-repeat center center;
+  background-size: cover;
+  background-position: bottom;
+  height: 775px;
+}
+.main_visual_iphone{
+  background-image: url("img/MV_iphone_sp.png"); 
+  background-repeat: no-repeat;
+  background-position: top 250px center;
+  background-size: 100vw;
+  height: 960px;
+}
+.main_visual_title{
+  color: #fff;
+  text-align: center;
+  font-size: 5.2rem;
+  font-weight: 600;
+  margin-top: 65px;
+  margin-bottom: 20px;
+  padding-top: 65px;
+  line-height: 1.0;
+  letter-spacing: 0.029em;
+}
+.main_visual_title span{
+  font-size: 1.8rem;
+  font-weight: 200;
+  letter-spacing: 0em;
+}
+/*アプリへのリンク*/
+.app_link{
+  display: flex;
+  justify-content:center;
+  margin: 0 auto;
+}
+.app_link li:first-of-type{
+  margin-right: 16px;
+}
+.app_link li a img{
+  width: 156px;
+}
+.app_link li a img:hover{
+  transform: scale(0.95);
+  opacity: 0.5;
+}
+/*---------------------------
+*Home各Section
+---------------------------*/
+.home_about_img{
+  padding-bottom: 60px;
+}
+.home_about_img li{
+  padding-top: 60px;
+}
+.home_about_img li img{
+  display: block;
+  width: 170px;
+  margin: 0 auto;
+}
+.home_about_img li p{
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 20px;
+}
+.home_charge_visual{
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+.enigma_link{
+  color: #3dccb7;
+  font-weight: 700;
+  padding-bottom: 4px;
+  border-bottom: solid 1px #3dccb7;
+}
+.enigma_link:hover{
+  opacity: 0.4;
+}
+.home_charge_img{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  width: 300px;
+  margin: 0 auto;
+}
+.home_charge_img li img{
+  display: block;
+  width: 110px;
+}
+.home_charge_img li:nth-of-type(odd){
+  margin-right: 32px;
+}
+.home_charge_img li:nth-of-type(1),.home_charge_img li:nth-of-type(2){
+  margin-bottom: 32px;
+}
+.home_statement_visual{
+  padding-top: 60px;
+  margin-bottom: 20px;
+}
+.home_statement_visual img{
+  display: block;
+  margin: 0 auto;
+}
+.home_lost_visual{
+  padding-top: 97px;
+  margin-bottom: 60px;
+}
+.section_download{
+  background-color: #37474f;
+  padding-top: 56px;
+  padding: 56px 0px;
+}
+.download_title{
+  text-align: center;
+  font-size: 3.0rem;
+  font-weight: 700;
+  line-height: 1.33;
+  color: #fff;
+  padding-bottom: 40px;
+}
+.home_news{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.home_news_title{
+  font-size: 3.0rem;
+  font-weight: 700;
+  text-align: center; 
+  padding-bottom: 40px;
+}
+.home_news_container{
+  max-width: 600px;
+  padding: 32px 24px;
+  border-radius: 15px;
+  border: solid 1px  rgba(46, 90, 80, 0.12);
+  margin: auto;
+  background-color: #fafafa;
+}
+.home_news_one{
+  border-bottom: solid 1px rgba(23,56,51, 0.12);
+  margin-bottom: 22px;
+}
+.home_news_one:hover{
+  opacity: 0.4;
+}
+.home_news_one a time{
+  margin-top:  22px;
+}
+.home_news_one a p{
+  color:  #3dccb7;
+  font-weight: 700;
+  padding-top: 14px;
+  padding-bottom: 22px;
+}
+.home_news_more{
+  color:  #3dccb7;
+  font-weight: 700;
+}
+.home_news_more:hover{
+  opacity: 0.4;
+}
+
+/*---------------------------
+*Footer
+---------------------------*/
+
+.footer_nav_container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 70px 22px 38px 22px;
+}
+.footer_nav{
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #546e7a;
+  padding-right: 30px;  
+  padding-bottom: 28px;
+}
+.footer_nav p{
+  font-weight: 700;
+  padding-bottom: 28px;
+}
+.footer_nav ul li{
+  padding-bottom: 28px;
+}
+.footer_nav ul li a{
+  color: #546e7a;
+}
+.footer_nav ul li a:hover{
+  color: #3dccb7;
+  opacity: 0.9;
+}
+.footer_logo_wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0px 22px 40px;
+}
+.footer_logo{
+  width: 116px; 
+  margin-bottom: -5px;  
+}
+.footer_logo_small{
+  font-size: 1.2rem;
+  color: #546e7a;
+}
+/*---------------------------
+*下層ページ
+---------------------------*/
+/*カード仕様*/
+.sub_top{
+  text-align: center;
+  color: #fff;
+  margin-top: 65px;
+  height: 53.3vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.spec_top_visual{
+  background-image: url("img/SP_card_header.png");
+}
+.sub_top h1{
+  padding-top: 68px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.sub_top p{
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding-top: 16px;
+}
+.sub_spec{
+  padding-top: 85px;
+  padding-bottom: 20px;
+}
+.sub_spec img{
+  display: block;
+  margin: auto;
+}
+.sub_section_title{
+  padding-top: 60px;
+}
+.spec_table{
+  font-size: 1.1rem;
+  text-align: center;
+  vertical-align: center;
+  line-height: 1.5;
+}
+.spec_table th, .spec_table td{
+  border: solid 1px #E2E7E6;
+  border-collapse: collapse;
+  width: 25vw;
+  vertical-align: middle;
+}
+.spec_table td{
+  padding: 15px 13px;
+}
+.spec_table_kome{
+  font-size: 1.0rem;
+  color: #173833;
+  padding-top: 15px;
+  line-height: 1.6;
+}
+.spec_table .spec_table_none{
+  border-top: none;
+  border-left: none;
+}
+.spec_card_name p{
+  padding-top: 10px;
+}
+.spec_digina{
+  background: #BFB6D7;
+}
+.spec_sotona{
+  background: #65C5DC;
+}
+.spec_sotonaplus{
+  background: #EF8047;
+}
+.spec_table th{
+  font-size: 1.5rem;
+  color: #fff;
+  line-height: 1.3;
+}
+.spec_table tr td:first-of-type{
+  font-weight: 700;
+}
+.spec_card_bg{
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 8px;
+}
+.spec_card_bg img{
+  display: block;
+  margin: 8px auto;
+}
+
+/*会社概要*/
+.company_top_visual{
+  background-image: url("img/SP_company_header.png");
+}
+.company_top_visual h1{
+  padding-top: 23vw;
+}
+.company_message{
+  line-height: 1.8;
+}
+.company_message_top{
+  font-weight: 700;
+  font-size: 2.0rem;
+  padding-bottom: 30px;
+}
+.company_message p{
+  padding-bottom: 32px;  
+}
+.company_sign{
+  display: flex;
+  padding-top: 40px;
+}
+.company_sign img{
+  width: 108px;
+  margin: 0;
+  padding-left: 16px;
+}
+.company_detail{
+  color: #fff;
+  padding-bottom: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("img/company_bg_sp.png");
+}
+.company_contents{
+  text-align: left;
+}
+.company_contents th{
+  padding-right: 40px;
+  padding-top: 14px;
+  line-height: 1.6;
+  width: 117px;
+}
+.company_contents td{
+  line-height: 1.6;  
+}
+
+/*規約類*/
+.rule_all{
+  margin-top: 65px;
+  padding-top: 65px;
+}
+.rule_title{
+  font-size: 2.4rem;
+  font-weight: 700;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: solid 1px; 
+  border-color: rgba(69,90,100,0.12);
+  line-height: 1.5;
+}
+.rule_container, .rule_container2{
+  font-weight: 300;
+  line-height: 2;
+  font-size: 1.2rem;
+}
+.rule_container h3{
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.rule_container h4{
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
+.rule_container ol{
+  margin-bottom: 80px;
+  list-style-type: decimal;
+  padding-left: 6%;
+}
+.rule_container.policy ol{
+  margin-bottom: 0;
+}
+.rule_container p{
+  padding-left: 3%;
+}
+.rule_container ul{
+  padding-left: 3%;
+}
+.rule_container ol .katakana{
+  list-style-type: katakana;
+  margin-bottom: 0;
+}
+.rule_container ol .maru_num{
+  list-style-type: none;
+  padding-left: 1.3rem;
+  text-indent: -1.3rem;
+  margin-bottom: 0;
+}
+.rule_container .bracket_num{
+  padding-left: 3%; /*1.3rem*/
+  text-indent: -3%;/* -1.3rem*/
+}
+.rule_container .bracket_num li{
+  list-style-type:none;
+  list-style-position:inside;
+  counter-increment: cnt;
+  margin-bottom: 0;
+}
+.rule_container .bracket_num li:before{
+  display: marker;
+  content: "("counter(cnt)")";
+}
+.rule_ul_circle{
+  list-style: disc;
+}
+.rule_attention_ul{
+    padding-left: 1em;
+    text-indent: -1em;  
+}
+.rule_attention_ul li:before,.rule_settlement li:before {
+    content:  "";     /* 空の要素作成 */
+    width:  5px;       
+    height:  5px;  
+    display:  inline-block;  
+    background-color: #37474F;
+    border-radius:  50%; 
+    position:  relative;
+    top: -2px; 
+    margin-right: 5px;
+}
+.rule_container.rule_settlement h3{
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+.rule_container.rule_settlement ul{
+  padding-left: 6%;
+  text-indent: -3%;
+}
+
+/*404*/
+.error_404{
+  margin-top: 65px;
+  padding-top: 50px;
+  text-align: center
+}
+.error_404 p{
+  line-height: 2;
+  padding-bottom: 30px;
+}
+.error_404 p:first-of-type{
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  padding-top: 30px;
+  color: #3dccb7;
+}
+
+
+@media screen and (min-width:768px){
+  .sp{
+    display: none;
+  }
+  .pc{
+    display: block;
+  }
+  .btn_1{
+    font-size: 1.8rem;
+    width: 220px;
+  }
+  .inner{
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .flex_between{
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex_rv{
+    flex-direction: row-reverse;
+  }
+  .flex_center{
+    display: flex;
+    justify-content: center;
+  }
+  .pc_inner{
+    max-width: 1290px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .home_section_title, .sub_section_title{
+    font-size: 4.8rem
+  }
+  .home_section_mg{
+    font-size: 2.4rem;
+    max-width: 640px;
+    line-height: 2.0;
+  }
+  .sub_section_mg{
+    font-size: 1.8rem;
+    max-width: 426px;
+    line-height: 2.0;    
+  }  
+  /*Header*/
+   .header_title{
+    height: 80px;
+  }
+  .header_logo{
+    width: 137px;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  .menu_trigger{
+    display: none;
+  }
+  .header_nav{
+    position: static;
+    display: block;
+    top: 0px;
+    right: 10%;
+    width: auto;
+    padding-top: 0;
+  }
+  .header_nav_list{
+    display: flex;
+    position: static;
+  }
+  .header_nav_list li a{
+    font-size: 2.0rem;
+    font-weight: 700;
+    padding-top: 30px;
+    padding-bottom: 31px;
+    margin-left: 64px;
+    margin-bottom: 0;
+  }
+  .header_nav_list li a.current{
+     
+  }  
+  .header_nav_list li a.current:before{
+    width: 80px;
+    height: 4px;     
+  }
+  
+  /*MainVisual*/
+  .main_visual{
+    margin-bottom: 0;
+  }
+  .main_visual_bg{
+    background-image: url("img/MV_BG_pc.png"); 
+    background-repeat: no-repeat;
+    background-position: center top 95%;
+    height: 51vw;  
+  }
+  .main_visual_iphone{
+    background-image: url("img/Phone.png"); 
+    background-repeat: no-repeat;
+    background-position: top -310% right -56%;
+    background-size: 73vw;
+    height: 82vw;
+  }
+  .main_visual_container{
+    width: 32vw;
+  }
+  .main_visual_title{
+    margin-top: 80px;
+    font-size: 5.5vw;
+    padding-top: 12vw;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .main_visual_title span{
+    font-size: 1.96vw;
+  }
+  .main_visual_app .app_link{
+    margin: 0 auto;
+    width: 30vw;
+  }
+  
+  /*HOME各Section*/
+  .home_about{
+    margin-top: 140px;
+  }
+  .home_about_visual{
+    margin-top: 100px;
+  }
+  .home_about_img li:not(:last-of-type){
+    margin-right: 108px;
+  }
+  .home_charge_container{
+    padding-top: 160px;
+  }
+  .home_charge_visual{
+    padding-top: 0;
+  }
+  .home_charge_img{
+    justify-content: left;
+    margin: 0;
+    width: 400px;
+  }
+ .home_charge_img li img{
+    width: 140px;
+  }
+  .home_charge_img li:nth-of-type(odd){
+    margin-right: 40px;
+  }
+  .home_charge_img li:nth-of-type(1),.home_charge_img li:nth-of-type(2){
+    margin-bottom: 40px;
+  }  
+  .home_statement_comment{
+    padding-top: 380px;
+  }
+  .home_statement_visual{
+    padding-top: 115px;
+  }
+  .home_lost{
+    flex-flow: row-reverse;    
+  }
+  .home_lost_title{
+    padding-top: 400px;
+  }
+  .home_lost_visual{
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+  .home_lost_visual img{
+    width: 743px;
+    padding-top: 190px;
+    padding-bottom: 140px;
+  }
+  .section_download{
+    padding: 125px 0px;
+  }
+  .download_title{
+    font-size: 4.8rem;
+  }
+  .app_link li:first-of-type{
+  margin-right: 2vw;
+  }
+  .app_link li a img{
+    width: 400px;
+  }
+  .home_news{
+    padding: 160px 0;
+  }
+  .home_news_title{
+    font-size: 4.8rem;
+    padding-bottom: 84px;
+  }
+  .home_news_container{
+    font-size: 2.0rem;
+    padding: 40px 110px;
+  }
+  .home_news_one a p {
+    padding-top: 20px;
+    padding-bottom: 32px;
+  }
+  .footer_nav_container{
+    padding: 80px 0 60px;
+    font-size: 1.8rem;
+  }
+  .footer_nav{
+    padding-right: 108px;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  .footer_logo_wrap{
+    margin: 0 0 110px;
+  }
+  .footer_logo_small{
+    margin: auto;
+    font-size: 1.4rem;
+  }
+  .footer_logo{
+    width: 137px;
+    margin-bottom: 10px;
+  }
+  /*---------------------------
+  *下層ページ
+  ---------------------------*/
+  /*カード仕様*/
+  .sub_top{
+    height: 26vw;
+    background-image: url("img/PC_header_BG_card.png");
+  }
+  .sub_top h1{
+    font-size: 4.8rem;
+    padding-top: 9vw;
+  }
+  .sub_top p{
+    font-size: 2.4rem;
+    padding-top: 30px;
+  }
+  .sub_spec{
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+  .spec_detail{
+    padding-top: 100px;
+    padding-bottom: 300px;
+  }
+  .spec_table{
+    font-size: 1.8rem;
+  }
+  .spec_card_name{
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .spec_card_name p{
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }  
+  .spec_table th{
+    font-size: 3.0rem;
+  }
+  .spec_table td{
+    padding: 20px 40px;
+  }
+  .spec_card_bg{
+    max-width: 294px;
+    margin: 0 auto 20px;
+  }
+  .spec_table .spec_table_none{
+    width: 15%;
+  }
+  .spec_table_kome{
+    font-size: 1.6rem;
+    padding-top: 40px;
+  }
+  
+  /****会社概要ページ****/ 
+  .company_top_visual{
+    background-image: url("img/PC_Header_BG_company.png");
+  }
+  .company_top_visual h1{
+    padding-top: 12vw;
+  }
+  .company_message{
+    font-size: 2.4rem;
+    line-height: 1.5;
+  }
+  .company_message_top{
+    font-size: 3.4rem;
+    font-weight: 700;
+    padding-bottom: 60px;
+  }
+  .company_message p{
+    padding-bottom: 48px;
+  }
+  .company_sign img{
+    width: 213px;
+    padding-left: 32px;
+    padding-bottom: 2px;
+  }
+  .company_contents{
+    font-size: 2.4rem;
+    margin: 50px auto 0px;
+  }
+  .company_contents th{
+    padding-right: 80px;
+    width: 204px;
+  }  
+  
+    /*規約等*/
+  .rule_all{
+    margin-top: 160px;
+  }
+  .rule_title{
+    font-size: 4.8rem;
+    padding-bottom: 30px;
+  }  
+  .rule_container,.rule_container2{
+    font-size: 2.4rem;
+  }
+  .rule_container h3{
+    font-size: 3.0rem;
+    margin-bottom: 80px;
+  }
+  .rule_container h4{
+    font-size: 2.4rem;
+    margin-top: 40px;
+  }
+  .rule_attention_ul li:before,.rule_settlement li:before {
+    width:10px;   
+    height:10px; 
+    top:-4px; 
+    margin-right: 16px; 
+  }
+  .rule_container.rule_settlement ul{
+    padding-left: 4%;
+    text-indent: -1%;
+  }
+
+  
+  
+}
+
+@media screen and (min-width:768px) and ( max-width:1024px) {
+  .home_section_title{
+    font-size: 3.5rem;
+  }  
+  .home_section_mg{
+    font-size: 2rem;
+  }  
+  
+  /****HOMEページ****/
+  .header_nav_list li a{
+    font-size: 1.9rem;
+    margin-left: 22px;
+  }
+    .main_visual_container{
+    width: 40vw;
+  }
+  .main_visual_title{
+    font-size: 7vw;
+    padding-top: 10vw;
+    width: 40vw;
+  }
+  .main_visual_title span{
+    font-size: 2.6vw;
+  }
+  .main_visual_app .app_link{
+    width: 40vw;
+  }  
+
+  /****カード仕様ページ****/  
+  .sub_top h1{
+    font-size: 3.0rem;
+  }
+  .sub_top p{
+    font-size: 1.5rem;
+  }
+
+
+  
+  
+  
+  
+}
+
+

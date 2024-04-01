@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+/*お知らせ・プレスリリース*/
+.news_all{
+  margin-top: 65px;
+  padding-top: 65px;
+}
+.news_title{
+  font-size: 2.4rem;
+  font-weight: 700;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: solid 1px; 
+  border-color: rgba(69,90,100,0.12);
+  line-height: 1.5;
+}
+.news_every, .news_each{
+  padding-bottom: 20px;
+}
+.news_every:hover{
+  opacity: 0.4;
+}
+.news_every p, .news_each .content{
+  border-bottom: solid 1px;
+  border-color: rgba(69,90,100,0.12);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.news_every p{
+  color: #3dccb7;
+  font-weight: 700; 
+  line-height: 1.2;
+}
+.news_each .content{
+  line-height: 2.0;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+.news_each h3{
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.8;
+}
+.news_each h4{
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 3.0;
+}
+.news_each h5{
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.news_each .img_center{
+  display: block;
+  margin: 0 auto;
+}
+.news_next{
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
+/*  border-bottom: solid 1px;
+  border-color: rgba(69,90,100,0.12);*/
+}
+
+
+/*イベント用規約*/
+.eventrule_all{
+  margin-top: 65px;
+}
+.eventrule_each{
+  line-height: 2.0;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+.eventrule_each h2{
+  font-size: 2.4rem;
+  font-weight: 700;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: solid 1px;
+  border-color: rgba(69,90,100,0.12);
+  line-height: 1.5;
+}
+.eventrule_each h3{
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.8;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.eventrule_each h4{
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 3.0;
+}
+.eventrule_each h5{
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.eventrule_each ul li:before{
+  content: "";
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  background-color: #37474F;
+  border-radius: 50%;
+  position: relative;
+  top: -2px;
+  margin-right: 5px;
+}
+.eventrule_each ul{
+  padding-left: 4%;
+  text-indent: -3%;
+}
+
+.eventrule_each .img_center{
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+@media screen and (min-width:768px){
+
+    /*お知らせ・プレスリリース*/
+  .news_all{
+    margin-top: 160px;
+    max-width: 900px;
+  }
+  .news_title{
+    font-size: 4.8rem;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+  }
+  .news_every{
+    font-size: 2.0rem;
+    padding-bottom: 40px;
+  }
+  .news_every p{
+    padding-top: 15px;
+    padding-bottom: 32px;
+  }
+  .news_each time{
+    font-size: 2.0rem;
+  }
+  .news_each .content{
+    font-size: 2.4rem;
+    min-height: 35vh;
+  }
+  .news_each h3{
+    font-size: 3.0rem;
+  }
+  .news_each h4{
+    font-size: 2.4rem;
+  }
+  .news_each h5{
+    font-size: 2.0rem;
+  }
+  
+  
+  /*イベント用規約*/
+  .eventrule_all{
+    margin-top: 160px;
+    max-width: 900px;
+  }  
+  .eventrule_each{
+    font-size: 2.4rem;
+    min-height: 35vh;
+  }
+  .eventrule_each h2{
+    font-size: 4.8rem;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+  }
+  .eventrule_each h3{
+    font-size: 3.0rem;
+  }
+  .eventrule_each h4{
+    font-size: 2.4rem;
+  }
+  .eventrule_each h5{
+    font-size: 2.0rem;
+  }
+  .eventrule_each ul li:before{
+    width: 10px;
+    height: 10px;
+    top: -4px;
+    margin-right: 16px;
+  }
+  
+  
+}
+
+@media screen and (min-width:768px) and ( max-width:1024px) {
+
+  
+  
+  
+}
+
+
