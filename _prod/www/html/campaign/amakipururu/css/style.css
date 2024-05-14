@@ -1,0 +1,654 @@
+@charset "UTF-8";
+/* CSS Document */
+/*
+Theme Name: AmakiPururu_LP
+Author: ULTRA Inc. 
+Imae Ryosuke
+Author URI: https://ultra-pay.co.jp/campaign/amakipururu/
+Description: 天鬼ぷるる ultra pay カード
+Version: 1.0
+*/
+/*---------------------------
+*Common
+---------------------------*/
+body {
+  color: #2B2226;
+  font-family: "Noto Sans CJK JP", sans-serif;
+  background-color: #fff;
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+.pu_footer_logo_wrap img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  body main .pc {
+    display: none;
+  }
+  body main .sp {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  body main.pc {
+    display: block;
+  }
+  body main .sp {
+    display: none;
+  }
+}
+/*---------------------------
+*Header
+---------------------------*/
+.pu_header {
+  background-color: #fff;
+  height: 60px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+.pu_header__inner {
+  max-width: 1080px;
+  padding: 15px 0;
+  margin: 0 auto;
+}
+.pu_header__inner img {
+  height: 30px;
+}
+
+.main_visual__inner {
+  background-image: url(../img/top_bg__pc.png);
+  background-size: cover;
+}
+.main_visual__inner h1 img {
+  width: 100%;
+  vertical-align: bottom;
+}
+.main_visual__exp {
+  background-color: #573B5B;
+  padding: 14px 0 40px;
+}
+.main_visual__exp img {
+  width: 472px;
+  margin: 0 auto 20px;
+  display: block;
+}
+.main_visual__exp_text {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+.main_visual__exp_text p {
+  color: #fff;
+  margin-bottom: 2px;
+  text-indent: -1em;
+  padding-left: 1em;
+}
+.main_visual__exp_text p:last-of-type {
+  margin-bottom: 0;
+}
+
+.pu_benefits {
+  background-image: url(../img/pt_dotted.png);
+  background-size: 40px;
+  background-repeat: repeat;
+  position: relative;
+}
+.pu_benefits__inner {
+  max-width: 1080px;
+  padding: 60px 0 80px;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+.pu_benefits__inner h2 {
+  height: 164px;
+  text-align: center;
+}
+.pu_benefits__inner h2 img {
+  height: 100%;
+}
+.pu_benefits::before {
+  content: "";
+  background-image: url(../img/ribon_top.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position-x: 0%;
+  position: absolute;
+  width: 100%;
+  height: 240px;
+  top: 0;
+  z-index: 0;
+}
+.pu_benefits::after {
+  content: "";
+  background-image: url(../img/ribon_under.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  position: absolute;
+  width: 100%;
+  height: 240px;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+.pu_benefits__list {
+  width: 1080px;
+  margin: 40px auto 30px;
+  display: flex;
+}
+.pu_benefits__list li {
+  width: 340px;
+  background-color: #fff;
+  padding: 30px 20px 50px;
+  border: 8px solid #E570BF;
+  border-radius: 20px;
+  margin-left: 30px;
+  box-sizing: border-box;
+}
+.pu_benefits__list li:first-child {
+  margin-left: 0;
+}
+.pu_benefits__list li h3 {
+  color: #E570BF;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 16px;
+  line-height: 1.4;
+  height: 80px;
+  position: relative;
+}
+.pu_benefits__list li h3 > span {
+  position: absolute;
+  width: 290px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pu_benefits__list li p {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 12px;
+}
+.pu_benefits__list_num {
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  height: 54px;
+  line-height: 54px;
+  background-image: url(../img/hart_icon.png);
+  background-size: 138px 54px;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.pu_benefits__exp_text {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+.pu_benefits__exp_text p {
+  margin-bottom: 2px;
+  text-indent: -1em;
+  padding-left: 1em;
+}
+.pu_benefits__exp_text p:last-of-type {
+  margin-bottom: 0;
+}
+
+.pu_voice {
+  background-color: #A56F99;
+}
+.pu_voice__inner {
+  padding: 148px 0 100px;
+  background-image: url(../img/pt_icon.png);
+  background-size: 134px 46px;
+  background-repeat: repeat;
+}
+.pu_voice__contents {
+  max-width: 1080px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 70px 60px 60px;
+  border: 8px #E570BF solid;
+  border-radius: 20px;
+  position: relative;
+  box-sizing: border-box;
+}
+.pu_voice__contents h2 {
+  width: 900px;
+  height: 96px;
+  background-image: url(../img/frame.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 34px;
+  font-weight: bold;
+  position: absolute;
+  top: -18%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.pu_voice__contents h2 span {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  text-align: center;
+}
+.pu_voice__contents_text {
+  text-align: center;
+}
+.pu_voice__contents_text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.pu_voice__contents_button {
+  background-color: #E570BF;
+  border-radius: 40px;
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+.pu_voice__contents_button > a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  padding: 18px 0;
+}
+.pu_voice__contents_button::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 10px solid #ffffff;
+  border-right: 0;
+  position: absolute;
+  top: 50%;
+  right: 36px;
+  transform: translate(0, -50%);
+}
+
+.app_install {
+  background-color: #F8F8F8;
+  padding: 40px 0 80px;
+}
+.app_install__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.app_install__inner p {
+  text-align: center;
+}
+.app_install__inner h3 {
+  color: #3DCCB7;
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px -1px 0 #FFF, 0px 1px 0 #FFF, -1px 0 #FFF, -1px 0 0 #FFF, 1px 0 0 #FFF;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.app_install__link {
+  display: flex;
+  justify-content: center;
+}
+.app_install__link li a {
+  display: block;
+}
+.app_install__link li a img {
+  height: 170px;
+}
+.app_install__link li:hover {
+  opacity: 0.7;
+}
+
+.pu_footer {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.footer_nav_container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 70px 22px 38px 22px;
+  background-color: #fff;
+}
+
+.footer_nav {
+  font-size: 12px;
+  font-weight: 300;
+  color: #546e7a;
+  padding-right: 30px;
+  padding-bottom: 28px;
+}
+
+.footer_nav p {
+  font-weight: 700;
+  padding-bottom: 28px;
+}
+
+.footer_nav ul li {
+  padding-bottom: 28px;
+}
+
+.footer_nav ul li a {
+  color: #546e7a;
+}
+
+.footer_nav ul li a:hover {
+  color: #3dccb7;
+  opacity: 0.9;
+}
+
+.pu_footer_logo_wrap {
+  display: flex;
+  padding: 0 16px 40px;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.pu_footer_logo_wrap a {
+  display: block;
+  width: 100px;
+}
+
+.pu_footer_logo_small {
+  font-size: 8px;
+  line-height: 1.5;
+  padding-top: 2px;
+}
+
+/*---------------------------
+*PC
+---------------------------*/
+@media screen and (min-width: 768px) {
+  .pu_footer {
+    background-color: #fff;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .footer_nav_container {
+    padding: 80px 0 60px;
+    font-size: 18px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .footer_nav {
+    padding-right: 108px;
+    font-size: 18px;
+    /*    font-weight: 500;*/
+  }
+  .pu_footer_logo_wrap {
+    padding: 0 32px 40px 0;
+  }
+  .pu_footer_logo_wrap a {
+    width: 98px;
+  }
+  .pu_footer_logo_small {
+    font-size: 12px;
+    line-height: 1.5;
+    margin: auto;
+  }
+}
+/*---------------------------
+*SP
+---------------------------*/
+@media screen and (max-width: 768px) {
+  .pu_header__inner {
+    padding: 16px;
+  }
+  .main_visual__inner {
+    background-image: url(../img/top_bg__sp.png);
+    background-size: cover;
+  }
+  .main_visual__exp {
+    padding-top: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .main_visual__exp img {
+    width: 100%;
+  }
+  .main_visual__exp_text p {
+    font-size: 12px;
+  }
+  .pu_benefits {
+    background-image: url(../img/pt_dotted.png);
+    background-size: 30px;
+    background-repeat: repeat;
+    position: relative;
+  }
+  .pu_benefits__inner {
+    padding: 30px 16px 80px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+  }
+  .pu_benefits__inner h2 {
+    height: auto;
+    text-align: center;
+    padding: 0 16px;
+  }
+  .pu_benefits__inner h2 img {
+    width: 100%;
+  }
+  .pu_benefits::before {
+    content: "";
+    background-image: url(../img/ribon_top.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position-x: 0%;
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    top: 0;
+    z-index: 0;
+  }
+  .pu_benefits::after {
+    content: "";
+    background-image: url(../img/ribon_under.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+  }
+  .pu_benefits__list {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    margin: 20px auto 20px;
+    display: block;
+  }
+  .pu_benefits__list li {
+    width: 100%;
+    padding: 30px 20px 50px;
+    margin-top: 40px;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+  .pu_benefits__list li:first-child {
+    margin-top: 0;
+  }
+  .pu_benefits__list li h3 {
+    font-size: 24px;
+    text-align: center;
+    height: auto;
+    position: relative;
+  }
+  .pu_benefits__list li h3 > span {
+    position: static;
+    width: auto;
+  }
+  .pu_benefits__list li p {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+  .pu_benefits__list_num {
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    height: 54px;
+    line-height: 54px;
+    background-image: url(../img/hart_icon.png);
+    background-size: 138px 54px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+  .pu_benefits__exp_text p {
+    font-size: 12px;
+    margin-bottom: 2px;
+    text-indent: -1em;
+    padding-left: 1em;
+  }
+  .pu_benefits__exp_text p:last-of-type {
+    margin-bottom: 0;
+  }
+  .pu_voice__inner {
+    padding: 80px 16px 80px;
+    background-image: url(../img/pt_icon.png);
+    background-size: 134px 46px;
+    background-repeat: repeat;
+  }
+  .pu_voice__contents {
+    padding: 0 0 50px;
+    border: 8px #E570BF solid;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pu_voice__contents h2 {
+    width: 100%;
+    height: auto;
+    background-color: #E570BF;
+    background-image: none;
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    position: static;
+    text-align: center;
+    transform: none;
+    line-height: 1.3;
+    padding: 4px 0 10px;
+  }
+  .pu_voice__contents h2 span {
+    position: static;
+    width: auto;
+    text-align: center;
+    transform: none;
+  }
+  .pu_voice__contents_text {
+    padding: 34px 16px 0;
+    text-align: center;
+  }
+  .pu_voice__contents_text p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: left;
+    display: flex;
+  }
+  .pu_voice__contents_button {
+    width: 90%;
+    padding: 0 16px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .pu_voice__contents_button > a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    padding: 18px 0;
+  }
+  .pu_voice__contents_button:hover {
+    opacity: 0.7;
+  }
+  .pu_voice__contents_button::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 10px solid #ffffff;
+    border-right: 0;
+    position: absolute;
+    top: 50%;
+    right: 36px;
+    transform: translate(0, -50%);
+  }
+  .app_install {
+    padding: 50px 0 80px;
+  }
+  .app_install__inner p {
+    font-size: 14px;
+    text-align: center;
+  }
+  .app_install__inner h3 {
+    color: #3DCCB7;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px -1px 0 #FFF, 0px 1px 0 #FFF, -1px 0 #FFF, -1px 0 0 #FFF, 1px 0 0 #FFF;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+  }
+  .app_install__link {
+    display: flex;
+    justify-content: center;
+  }
+  .app_install__link li {
+    margin-left: 10px;
+  }
+  .app_install__link li a {
+    display: block;
+  }
+  .app_install__link li a img {
+    height: 54px;
+  }
+  .app_install__link li:first-child {
+    margin-left: 0;
+  }
+}
+.mask_block {
+  position: relative;
+}
+.mask_block > p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  color: #fff;
+  width: 340px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 99999999;
+}
+.mask_block .pu_voice {
+  opacity: 0.3;
+}/*# sourceMappingURL=style.css.map */

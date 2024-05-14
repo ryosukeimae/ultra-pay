@@ -1,0 +1,1326 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*
+Theme Name: Hoshikawasara_LP
+Author: ULTRA Inc. Fuyu Nagao
+Author URI: https://ultra-pay.co.jp/campaign/spyroom/
+Description: スパイ教室 ultra pay カード
+Version: 1.0
+*/
+
+
+/*---------------------------
+*Common
+---------------------------*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+html{
+	font-size: 62.5%;
+}
+body{
+  color: #2B2226;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 1.4rem;
+	-webkit-font-smoothing:antiliased;
+	-moz-osx-font-smoothing:grayscale;
+	font-feature-settings: "palt";
+	/*letter-spacing: 0.025em;*/
+}
+img{
+	max-width:100%;
+	height: auto;
+}
+a{
+  color: #2B2226;
+	text-decoration: none;
+}
+.text_center{
+	text-align: center;
+}
+.bg_gray{
+  background-color: #F4F3F4;  
+}
+.bg_white{
+  background-color: #FFF;  
+}
+.color_red{
+  color: #810E25;
+}
+.pc,.pc_inline{
+	display: none;
+}
+.hover:hover{
+  opacity: 0.5;
+  transform: scale(0.95);
+}
+.spy_link{
+  color: #810E25;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+/*---------------------------
+*header
+---------------------------*/
+.spy_header{
+  box-shadow: 0px 2px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+.spy_header img{
+  margin: 16px 0px 16px 16px;
+  width: 90px;
+}
+
+/*---------------------------
+*Main
+---------------------------*/
+/*Top Visual*/
+.spy_sect_top:before{
+  content:"";
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100%;
+  height:100vh;
+  background-position:50% 100%;
+  background: url("../img/background_lattice_sp.png") ;
+  background-size: 100%;
+}
+.spy_topvisual{
+  padding: 60px 0px 60px;
+}
+.logo_spyroom{
+  width: 220px;
+}
+.spy_topvisual_expir{
+  font-size: 1.8rem; 
+  color: #810E25;
+  font-weight: 900;
+  padding-top: 28px;
+  line-height: 1.2;
+}
+.mainimg_spyroom{
+  margin-top: 32px;
+  width: 300px;
+}
+.term_apply{
+  margin-top: -32px;
+  padding-top: 48px;
+  padding-bottom: 32px;
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.43;
+  width:100%;
+  background-position:50% 100%;
+  background: url("../img/background_bordeaux_sp.png") ;
+}
+.term_apply p:first-of-type{
+  padding-bottom: 10px;
+}
+.sample_btn a{
+  position: relative; 
+  display: block;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  max-width: 270px;
+  height: 50px;
+  margin: 10px auto 0;
+  padding-top: 9px;
+  padding-right: 15px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+}
+.sample_btn a::after{
+  content: ' ';
+  display: inline-block;
+  position: absolute;
+  top: 42%;
+  width: 0;
+  height: 0;
+  margin-left: 8px;
+  border-top: 8px solid #fff;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;  
+}
+.mainvisual_first_caution{
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1.5;
+  padding: 18px 16px 0;
+  margin: auto;
+	color: #810E25;
+}
+.mainvisual_first_caution p:first-child{
+  margin-bottom: 20px;
+}
+.spy_title_1{
+  font-weight: 900;
+  color: #fff;
+  padding: 16px 32px;
+  background: url("../img/title_frame1_sp.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 40px;
+  max-width: 1080px;
+}
+.spy_title_1_1{
+  font-size: 1.6rem;
+  padding-bottom: 24px;
+}
+.spy_title_1_2{
+  font-size: 2.3rem;
+  line-height: 1.26;
+}
+.spy_mission_order{
+  margin-right: 32px;
+  margin-left: 32px;
+}
+.spy_mission_order li{
+  padding: 24px 0px;
+  border: 3px solid #810E25;
+  margin: 0px auto 24px;
+  font-size: 1.6rem;
+  max-width: 420px;
+}
+.spy_mission_order h3,.spy_sect_mdetail_container h3{
+  padding: 8px 0px;
+  line-height: 1.2;
+  border: solid #807147;
+  border-width: 1px 0 1px;
+  border-image: linear-gradient(to right, #997020 0%, #d9c587 50%, #997020 100%);
+  border-image-slice: 1;
+  position: relative;
+  width: 120px;
+  margin: 0 auto 24px;
+  font-weight: 900;
+}
+.spy_mission_order h3::before, 
+.spy_mission_order h3::after,
+.spy_sect_mdetail_container h3::before,
+.spy_sect_mdetail_container h3::after{
+    content: "";
+    border: solid #807147;
+    border-width: 0 0 2px;
+    border-image: linear-gradient(to right, #997020 0%, #d9c587 50%, #997020 100%);
+    border-image-slice: 1;
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: absolute;
+}
+.spy_mission_order h3::before,
+.spy_sect_mdetail_container h3::before{
+    bottom: 2px;
+    left: 0;
+}
+.spy_mission_order h3::after,
+.spy_sect_mdetail_container h3::after{
+    top: 2px;
+    left: 0;
+}
+.spy_mission_order .part_1{
+  color: #810E25;
+  padding-bottom: 12px;
+  font-weight: 700;
+}
+.spy_mission_order .part_2{
+  font-size: 2.8rem;  
+  font-weight: 900; 
+  padding-bottom: 24px;
+  line-height: 1.25;
+}
+.spy_mission_order .part_3{
+  padding-bottom: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.spy_missiondetail_btn{
+  display: block;
+  background-color: #810E25;
+  color: #fff;
+  font-weight: 700;
+  max-width: 230px;
+  height: 44px;
+  margin: 0 auto;
+  padding-top: 14px; 
+}
+
+.spy_missiondetail_btn p{
+  position: relative;   
+}
+.spy_missiondetail_btn p::after{
+  content: ' ';
+  display: inline-block;
+  position: absolute;
+  top: 38%;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-top: 7px solid #fff;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;  
+}
+.spy_install{
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #2B2226;
+  padding-top: 70px;
+  padding-bottom: 35px;
+  text-align: center;
+}
+.spy_app_container{
+  display: flex;
+  padding: 0px 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.spy_app_container li:first-of-type{
+  margin-right: 16px;
+}
+.spy_app_kome{
+  font-size: 1.2rem;
+  text-align: left;
+  line-height: 1.66;
+  padding: 30px 16px 60px 28px;
+  margin: 0 auto;
+  max-width: 600px;
+  text-indent:-12px;
+}
+.spy_app_kome a{
+	color: #3DCCB7;
+}
+
+/*特典詳細*/
+.spy_sect_mdetail{
+  padding: 60px 16px 60px;
+  width:100%;
+  background-position:50% 100%;
+  background: url("../img/background_bordeaux_sp.png");
+  background-size: 100%;  
+}
+.spy_sect_mdetail_container{
+  margin: 0 auto 20px;
+  padding: 32px 16px 60px 16px;
+  max-width: 1080px;  
+  background-position:50% 100%;
+  background: url("../img/background_lattice_sp.png") ;
+  background-size: cover;
+}
+.spy_sect_mdetail_container h3{
+  color: #2B2226;
+  font-size: 2.3rem;
+  font-weight: 700;
+  width: 140px;
+  padding: 10px 0px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.mdetail_point{
+  margin-bottom: 32px;
+  text-align: center;
+  line-height: 1.4;
+}
+.mdetail_point h4{
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #810E25;
+  padding: 8px 20px;
+  line-height: 0.6;
+  border-bottom: solid #807147;
+  border-width: 4px;
+  border-image: linear-gradient(to right, #997020 0%, #d9c587 70%, #d9c58721 100%);
+  border-image-slice: 1;
+  margin: 0 auto 8px;
+  display: inline-block;
+}
+.mdetail_point p{
+  font-size: 1.9rem;
+  font-weight: 900;
+}
+.mdetail_cardimg{
+  display: flex;
+  align-items: center;  
+  margin-bottom: 32px;
+}
+.mdetail_cardimg div:first-of-type{
+  margin-right: 20px;
+}
+.spy_sect_mdetail_container .detail{
+  font-size: 1.4rem;
+  line-height: 1.8;
+  padding-bottom: 16px;
+  font-weight: 700;
+}
+.spy_sect_mdetail_container .detail span{
+  color: #810E25;  
+  font-weight: 900;
+}
+.mdetail_voice_ex{
+  color: #810E25;  
+  font-weight: 900;
+  margin-bottom: 32px;
+  line-height: 1.29;
+}
+.mdetail_voice_wrap h5{
+  max-width: 500px;
+  margin: auto;
+}
+.mdetail_voice_wrap h5 .m_title{
+  font-size: 1.7rem;
+}
+.sp.img_lily_up{
+  display: block;
+  margin: auto;
+}
+.mdetail_voice_wrap .thumbnail{
+  margin: auto;
+  display: block;
+}
+.mdetail_voice_wrap audio{
+  margin-bottom: 25px;
+  display: block;
+  margin: 0 auto 25px;
+}
+.mdetail_voicechart{
+  font-size: 1.2rem;
+  margin: 0 auto 32px;
+  text-align: center;
+  width: 80vw;
+}
+.mdetail_voicechart .table_title{
+  background-color: #BF7C8D;
+  font-weight: 900;
+  padding: 10px;
+}
+.mdetail_voicechart th, .mdetail_voicechart td{
+  border: solid 1px #810E25;
+  border-collapse: collapse;
+  vertical-align: middle;
+}
+.mdetail_voicechart td{
+  padding: 8px 0px;
+  background-color: #FFFEEE;
+  line-height: 1.4;
+}
+.spy_sect_mdetail_container .caution{
+  padding: 16px 16px 16px 24px;
+  background-color: #F4F3F4;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-indent:-12px;  
+}
+.spy_sect_mdetail_container .caution li:not(:last-of-type) {
+  padding-bottom: 10px;
+}
+.spy_sect_mdetail_container .flow_title{
+  width: 190px;
+}
+.mission_flow .flow_box{
+  width: 310px;
+  border-radius: 5px;
+  margin: 0 auto;
+  background-color: #fff;
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  padding: 20px 20px;
+  line-height: 1.2;  
+}
+.flow_box img{
+  width: 250px;
+  padding-top: 20px;
+}
+.mission_flow_arrow{
+  width: 0;
+  height: 0;
+  border-top: 15px solid #878284;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  margin: 20px auto 0px;
+}
+
+.mdetail_minililyimg{
+  width: 240px;
+  margin: -56px auto -44px;
+}
+
+/*ultra pay カードとは？*/
+.spy_sect_ultra{
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #F8F8F8;
+  padding: 90px 16px 80px;
+}
+.spy_sect_ultra h2{
+  font-size: 2.5rem;
+  color: #3DCCB7;
+  font-weight: 900;  
+}
+.spy_sect_ultra_sub{
+  line-height: 1.5;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  font-size: 1.5rem;
+}
+.spy_ultra_feature{
+  padding-bottom: 20px;
+  font-size: 2.0rem;
+}
+.spy_ultra_feature li img{
+  width: 135px;
+  padding-bottom: 18px;
+}
+.spy_ultra_feature li p{
+  padding-bottom: 50px;
+}
+.spy_btn1{
+  display: block;
+  color: #fff;
+  background-color: #3dccb7;
+  border-radius: 22px;
+  margin: auto;
+  height: 46px;
+  line-height: 46px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  width: 320px;
+}
+
+/*カードの申し込みについて*/
+.spy_sect_apply{
+  padding: 80px 16px 0px;
+  font-size: 1.4rem;
+  line-height:1.5;
+}
+.spy_sect_apply h2{
+  font-weight: 900;
+  font-size: 2.3rem;
+  color: #fff;
+  padding: 16px 0px;
+  text-align: center;
+  background: url("../img/title_frame3_sp.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 80px;
+  line-height: 1.25;
+}
+.spy_sect_apply .term{
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: #810E25;
+  font-weight: 700;
+}
+.apply_kome{
+  font-size: 1.2rem;
+  text-indent: -12px;
+  padding-left: 12px;
+}
+.spy_apply_container h3{
+  padding-top: 32px;
+  font-size: 1.9rem;
+  font-weight: 900;
+}
+.spy_apply_process{
+  background-color: #F4F3F4;
+  padding: 30px 16px 25px;
+  margin: 2.0em auto;
+  min-width: 120px;
+  max-width: 560px;
+  border: solid 2px #E2E7E6;
+  box-sizing: border-box;   
+}
+.spy_apply_process.next_t{
+  position: relative; 
+}
+.spy_apply_process.next_t:before{
+  content: "";
+  position: absolute;
+  bottom: -44px;
+  left: 10%;
+  margin-left: -15px;
+  border: 22px solid transparent;
+  border-top: 23px solid #F4F3F4;
+  z-index: 2;
+}
+.spy_apply_process.next_t:after{
+  content: "";
+  position: absolute;
+  bottom: -46px;
+  left: 10%;
+  margin-left: -17px;
+  border: 23px solid transparent;
+  border-top: 23px solid #E2E7E6;
+  z-index: 1;  
+}
+.spy_apply_process h4{
+  font-size: 1.9rem;
+  font-weight: 700;
+  padding-bottom: 16px;
+}
+.spy_apply_process p{
+  font-size: 1.4rem;
+  line-height: 2.0;
+}
+.spy_apply_process .charge_detail{
+  font-size: 1.2rem;
+  text-indent: -12px;
+  padding-left: 12px;
+  padding-top: 20px;
+}
+.spy_apply_process .charge_detail a{
+  color: #3DCCB7;  
+  font-weight: 700;
+}
+.spy_apply_process_img_wrap{
+  padding-top: 32px;
+  margin: auto;
+  max-width: 480px;
+}
+
+
+/*カード仕様*/
+.spy_sect_spec h2{
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #fff;
+  padding: 16px 0px;
+  text-align: center;
+  background: url("../img/title_frame5_sp.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 60px 16px;
+  line-height: 1.5;  
+}
+.spy_spec_table{
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+.spy_spec_table .width_l{
+  width: 27vw;
+  text-align: left;
+}
+.spy_spec_table th, .spy_spec_table td{
+  border: solid 2px #E2E7E6;
+  border-collapse: collapse;
+  vertical-align: middle;
+  padding: 16px 10px;  
+}
+.spy_spec_table th:first-of-type, .spy_spec_table td:first-of-type{
+  font-weight: 700;
+}
+.spy_spec_table th:last-of-type, .spy_spec_table td:last-of-type{
+  text-align: center;
+}
+.spy_spec_caution{
+  padding: 40px 20px 40px 40px;
+  background-color: #F4F3F4;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-indent:-1em;
+  margin-right: 16px;
+  margin-left: 16px;
+  margin-bottom: 60px;
+}
+.spy_spec_caution li:not(:last-of-type) {
+  padding-bottom: 5px;
+}
+
+/*注意事項*/
+.spy_sect_caution{
+  padding: 60px 16px;
+  background-color: #E9E8E9;
+}
+.spy_sect_caution h3{
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 900;
+  padding-bottom: 40px;
+}
+.spy_sect_caution ul{
+  padding-left: 20px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-indent:-1rem;  
+}
+.spy_sect_caution li:not(:last-of-type){
+  padding-bottom: 10px;
+}
+.spy_sect_caution a{
+  color: #3DCCB7;
+  font-weight: 700;
+}
+
+/*公式SNS*/
+.spy_sect_sns{
+  padding-top: 80px;
+}
+.spy_sect_sns h2{
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #fff;
+  padding: 16px 0px;
+  text-align: center;
+  background: url("../img/title_frame5_sp.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 60px 16px;
+  line-height: 1.5;    
+}
+.spy_sns_container{
+  padding-bottom: 90px;
+  max-width: 450px;
+  margin: auto;  
+}
+.spy_sns_container li a{
+  display: flex;
+  align-items: center;
+  padding: 6px 4px 6px 24px;
+  background-color: #360C19;
+  margin: 36px 16px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 0 rgba(54,12,25,0.2)
+}
+.spy_sns_container li .spy_blue:last-of-type{
+  background-color: #082C63;
+  box-shadow: 0 10px 20px 0 rgba(8,44,99,0.2)
+}
+.spy_sns_container li img{
+  display: block;
+  padding-right: 24px;
+  height: 60px;
+}
+.spy_sns_container div{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+.spy_sns_name{
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #FFF;
+  padding-bottom: 10px;
+  line-height: 1.2;
+}
+.spy_sns_address{
+  font-size: 1.2rem;
+  color: #FFF;
+  opacity: 0.7;
+}
+
+/*お問合せ*/
+.spy_sect_contact{
+  background-color: #F8F8F8;
+  padding: 60px 16px;
+}
+.spy_sect_contact h3{
+  font-size: 20px;
+  padding-bottom: 36px;
+}
+.spy_contact_ultra{
+  line-height: 1.5;
+  padding-bottom: 36px;
+}
+.spy_contact_kome{
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/*---------------------------
+*Footer
+---------------------------*/
+.spy_footer{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.footer_nav_container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 70px 22px 38px 22px;
+  background-color: #fff;
+}
+.footer_nav{
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #546e7a;
+  padding-right: 30px;  
+  padding-bottom: 28px;
+}
+.footer_nav p{
+  font-weight: 700;
+  padding-bottom: 28px;
+}
+.footer_nav ul li{
+  padding-bottom: 28px;
+}
+.footer_nav ul li a{
+  color: #546e7a;
+}
+.footer_nav ul li a:hover{
+  color: #3dccb7;
+  opacity: 0.9;
+}
+.spy_footer_logo_wrap{
+  display: flex;
+  padding: 0 16px 40px;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.spy_footer_logo_wrap a{
+  display: block;
+  width: 100px;
+}
+.spy_footer_logo_small{
+  font-size: 0.8rem;
+  line-height: 1.5;
+  padding-top: 2px;
+}
+
+
+@media screen and (min-width:768px){
+  /*---------------------------
+  *Common
+  ---------------------------*/
+  .sp{
+    display: none;
+  }
+  .pc{
+    display: block;
+  }
+  .pc_flex_box{
+    display: flex;  
+  }
+  .pc_inline{
+    display: inline;
+  }
+  /*---------------------------
+  *Header
+  ---------------------------*/
+  .spy_header{
+    box-shadow: none;
+  }
+  .spy_header img{
+    margin: 16px 0px 16px 142px;
+    width: 98px;
+  }
+  /*Top Visual*/
+  .spy_sect_top:before{
+    background: url("../img/background_lattice_pc.png");
+    background-repeat: no-repeat;
+    background-size: cover;  
+  }
+  .spy_topvisual{
+    padding: 0px;
+    margin-top: 110px;
+  }
+  .spy_topvisual_pcbox{
+    width: 90vw;
+    max-width: 920px;
+    margin: 60px auto;
+  }
+  .logo_spyroom{
+    width: 380px;
+    padding-top: 10px;
+    padding-right: 50px;
+  }
+  .spy_topvisual_expir{
+    font-size: 2.4rem;
+    padding-top: 30px;
+    padding-right: 50px;
+  }
+  .mainimg_spyroom{
+    margin-top: 0px;
+    width: 500px;
+  }
+  .term_apply{
+    background: url("../img/background_bordeaux_pc.png"); 
+    margin-top: -210px;
+    padding:  30px 588px 30px 0px;
+    font-size: 3.2rem;
+  }
+  .sample_btn a{
+    font-size: 2.2rem;
+    max-width: 320px;
+    padding-top: 6px;
+  }
+  .mainvisual_first_caution{
+    padding-top: 24px;
+    max-width: 1280px;
+  }    
+  .spy_title_1_pre{
+    padding: 0 16px;
+  }
+  .spy_title_1{
+    background: url("../img/title_frame1_pc.png") no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 100px auto 60px;
+    padding: 32px 0 ;
+    max-width: 1080px;
+  }
+  .spy_title_1_1{
+    font-size: 2.4rem;
+  }
+  .spy_title_1_2{
+    font-size: 3.2rem;
+  } 
+  .spy_mission_order{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1080px;
+    margin: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .spy_mission_order li{
+    padding: 32px 0px;
+    border-width: 3px;
+    margin: 0px 10px 0px 0px;
+    width: 333px;
+  }
+  .spy_mission_order li:last-of-type{
+    margin: 0;
+  } 
+  .spy_mission_order h3,.spy_sect_mdetail_container h3{
+    font-size: 2.4rem;
+    padding: 16px 0px;
+    width: 220px;
+    margin: 0 auto 40px;   
+  }
+  .spy_mission_order .part_2{
+    font-size: 3.2rem;
+    padding-bottom: 48px;
+  }
+  .spy_mission_order .part_3{
+    padding-bottom: 24px;
+  } 
+  .spy_missiondetail_btn{
+    font-size: 1.8rem;
+    height: 49px;
+  }
+  .spy_install{
+    font-size: 3.4rem;
+    padding-top: 130px;
+    padding-bottom: 40px;
+  }
+  .spy_app_container{
+    width: 580px;
+  }
+  .spy_app_container li:first-of-type{
+    margin-right: 30px;
+  }
+  .spy_app_kome{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 40px 16px 100px;
+    max-width: 1300px;
+  }
+
+  /*特典詳細*/
+  .spy_sect_mdetail{
+    padding-top: 100px;
+  }
+  .spy_sect_mdetail_container{
+    margin-bottom: 40px;
+  }
+  .spy_sect_mdetail_container h3{
+/*    padding: 20px;*/
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 48px;
+  }  
+ .mdetail_point{
+   display: flex;
+   padding: 0 20px 0;   
+   width: 770px;
+   margin: 0 auto 20px;
+   border-bottom: solid #807147;
+   border-width: 8px;
+   border-image: linear-gradient(to right, #997020 0%, #d9c587 70%, #d9c58721 100%);
+   border-image-slice: 1;
+   line-height: 1.0;
+  }
+  .mdetail_point h4{
+    font-size: 2.4rem;
+    padding: 0px;
+    border: none;
+    text-align: right;
+    display: contents;
+    line-height: 1.0;
+  }
+  .mdetail_point p{
+    font-size: 2.4rem;
+  }
+  .mdetail_cardimg{
+    margin: 40px auto;
+    justify-content: center;
+  }  
+  .mdetail_cardimg img{
+    height: 290px;
+  } 
+  .mdetail_cardimg div:first-of-type{
+    margin-right: 90px;
+  }
+  .spy_sect_mdetail_container .detail{
+    font-size: 1.6rem;
+    text-align: center;
+    margin: auto;
+    line-height: 1.5;
+  }
+  .spy_sect_mdetail_container .mission_1_detail1{
+    max-width: 920px;
+    padding-bottom: 40px;
+  }
+  .mission_2 .mdetail_point{
+    width: 760px;
+  }   
+  .mdetail_mission2_wrap{
+    max-width: 930px;/*★横幅特別調整*/
+    margin: 40px auto 0;
+    justify-content: center;
+  }
+  .mdetail_mission2_wrap .detail{
+    text-align: center;
+    padding-top: 20px;
+   /* padding-left: 20px;*/
+    /*width: 570px;*/
+  }  
+  .mdetail_voice_ex{
+    text-align: left;
+    font-size: 2.0rem;
+    margin: 0 auto 40px;
+    width: 445px;  
+  }
+  .sp.img_lily_up{
+    display: none;
+  }  
+  .img_lily_up{
+    margin-right: -105px;
+  }
+  .mdetail_voice_wrap .thumbnail{
+    margin-top: 10px;
+    width: 302px;
+    height: 170px;
+  }
+  .mdetail_voice_wrap audio{
+    margin-bottom: 0;
+  }
+  .mdetail_voice_wrap .detail{
+    width: 520px;
+  }
+  .mdetail_voicechart{
+    font-size: 1.6rem;
+    width: 520px;
+    margin-bottom: 40px;
+    margin-top: 16px;
+  }
+  .spy_sect_mdetail_container .caution{
+    max-width: 920px;
+    font-size: 1.4rem;
+    margin: auto;
+    padding: 30px 30px;
+  }
+  .spy_sect_mdetail_container .flow_title{
+    width: 220px;
+  }
+  .mission_flow .flow_box{
+    line-height: 1.5;
+    padding: 35px 0;
+    width: 280px;
+  }
+  .mission_flow_arrow{
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #878284;
+    border-right: 15px solid transparent;
+    margin: 170px -30px 0px -12px;
+  }
+  .flow_box .flow_second{
+    padding-top: 60px;
+  }
+  .flow_box .flow_third{
+    padding-top: 50px;
+    width: 230px;
+  }
+  .mission_3 .mdetail_point{
+    width: 600px;
+  }
+  .spy_sect_mdetail_container .mission_3_detail1{
+    max-width: 920px;
+    margin-top: 40px;
+  }
+  .mission_3 .mdetail_voice_ex{
+    text-align: center;     
+  } 
+  .mdetail_mission3_wrap{
+ /*   flex-direction: row-reverse;*/
+    max-width: 920px;
+    margin: 40px auto 0;
+    justify-content: flex-end;
+  }
+  .mdetail_mission3_wrap .mdetail_voice_wrap{
+    width: 560px;
+  }
+  .mdetail_mission3_wrap .detail{
+    text-align: left;
+  } 
+  .mdetail_minililyimg{
+    width: 320px;
+    padding: 0px;
+    margin: 22px 0 0 0px;
+  }
+  
+   /*ultra pay カードとは？*/
+  .spy_sect_ultra h2{
+    font-size: 40px;
+  }
+  .spy_sect_ultra_sub{
+    font-size: 18px;
+    padding-bottom: 80px;
+    font-weight: 500;
+  }
+  .spy_ultra_feature{
+    display: flex;
+    width: 590px;
+    justify-content: space-between;
+    margin: auto;
+    padding-bottom: 30px;
+  }
+  .spy_ultra_feature li img{
+    width: 160px;
+  }
+  .spy_ultra_feature li p{
+    font-size: 2.4rem;
+    font-weight: 500;
+  }  
+  .spy_btn1{
+    font-size: 3.0rem;  
+    border-radius: 30px;
+    height: 60px;
+    line-height: 60px;
+  }
+  
+  /*カードの申し込みについて*/
+  .spy_sect_apply h2,
+  .spy_sect_spec h2,
+  .spy_sect_sns h2{
+    background: url("../img/title_frame4_pc.png") no-repeat; 
+    background-position: center;
+    background-size: contain;
+    font-size: 3.2rem;
+    padding: 24px 0;
+    max-width: 1080px;
+    margin: 100px auto;
+  }
+  .spy_apply_wrap{
+    max-width: 920px;
+    margin: auto;
+  }
+  .apply_kome{
+    font-size: 1.6rem;
+    text-indent: -16px;
+    padding-left: 16px;
+  }
+  .spy_sect_apply{
+    font-size: 1.8rem;
+  }
+  .spy_apply_container h3{
+    padding-top: 80px;
+    font-size: 2.8rem;
+  }
+  .spy_apply_process{
+    padding: 50px 40px 40px;
+    max-width: 920px;
+  }
+  .spy_sect_apply_container h4{
+    font-size: 2.4rem;
+    padding-bottom: 30px;
+  }
+  .spy_apply_process .spy_app_container{
+    margin-left: 0;
+  }
+  .spy_sect_apply_container p{
+    font-size: 1.8rem;
+  }    
+	.spy_apply_process .rinji_kome{
+		font-size: 1.4rem;
+	}
+  .spy_apply_process .charge_detail{
+    font-size: 1.4rem;
+    text-indent: -14px;
+    padding-left: 14px;    
+  }
+  .spy_apply_process_img_wrap{
+    width: 200px;
+    margin-top: 0;
+  }
+  .spy_apply_process_img_wrap p{
+    padding-right: 10px;
+    padding-left: 10px;
+  }  
+  .spy_apply_process_img img{
+    max-width: 210px;
+  }
+  .spy_apply_process_arrow{
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #878284;
+    margin: 148px 0px;
+  }
+  /*カード仕様*/
+  .spy_spec_table{
+    margin: 0 auto 40px;
+    font-size: 1.8rem;
+    max-width: 1080px;
+    text-align: center;
+  }
+  .spy_spec_table .width_l{
+    text-align: center;
+    width: 15vw;
+  }
+  .spy_spec_caution{
+    max-width: 1080px;
+    font-size: 1.4rem;
+    margin: 0 auto 100px;    
+  }
+  /*注意事項*/
+  .spy_sect_caution{
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .spy_sect_caution h3{
+    font-size: 3.4rem;
+  }
+  .spy_sect_caution ul{
+    max-width: 1080px;
+    font-size: 1.4rem;
+    margin: auto;
+  } 
+  
+  /*公式SNS*/
+  .spy_sect_sns{
+    padding-top: 0px;
+    padding-bottom: 80px;
+  }
+  .spy_sns_container{
+    display: flex;
+    justify-content: center;
+    max-width: 914px;
+    margin: auto;
+    padding-bottom: 200px;    
+  }
+  .spy_sns_container li{
+    display: flex;
+    border-radius: 10px;
+  }
+  .spy_sns_container li a{
+    width: 400px;
+    margin: 0 16px;
+  }  
+  .spy_sns_container li img{
+    padding-right: 20px;
+    height: 77px;
+  }
+  .spy_sns_name{
+    font-size: 2.4rem;
+  }
+  .spy_sns_address{
+    font-size: 1.6rem;
+  }
+  /*お問合せ*/
+  .spy_sect_contact{
+    max-width: 1080px;
+    margin: auto;
+    padding: 100px 40px;
+  }
+  .spy_sect_contact h3{
+    font-size: 2.4rem;
+    font-weight: 900;
+  }
+  .spy_contact_ultra{
+    font-size: 1.8rem;
+    padding-bottom: 36px;
+  }
+  .spy_contact_kome{
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  /*---------------------------
+  *Footer
+  ---------------------------*/
+  .spy_footer{
+    background-color: #fff;
+    padding: 0 5vw;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .footer_nav_container{
+    padding: 80px 0 60px;
+    font-size: 1.8rem;
+  }
+  .footer_nav{
+    padding-right: 108px;
+    font-size: 1.8rem;
+/*    font-weight: 500;*/
+  }  
+  .spy_footer_logo_wrap{
+    padding: 0 32px 40px 16px;
+  }
+  .spy_footer_logo_wrap a{
+    width: 98px;
+  }
+  .spy_footer_logo_small{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: auto;
+  }
+  
+
+}
+
+
+@media screen and (min-width:768px) and ( max-width:1024px) {
+  .spy_topvisual_expir{
+    font-size: 1.8rem;
+    padding-top: 14px;
+  }
+  .term_apply{
+    padding-right: 456px;
+  }
+  .mdetail_voice_wrap h5{
+    max-width: 455px;
+  }
+  .mdetail_voice_wrap .detail{
+    max-width: 463px;
+  }
+  .img_lily_up{
+    height: 300px;
+    margin-right: -77px;
+    margin-top: 50px;
+  }
+  .mdetail_voice_wrap .thumbnail{
+    width: 260px;
+    height: 146px;
+  }
+/*  .img_minichara{
+    max-width: 444px;
+  }*/
+  .mission_flow .flow_box{
+    width: 215px;
+  }
+
+  
+}
+
+
